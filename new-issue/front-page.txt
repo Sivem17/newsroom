@@ -17,6 +17,7 @@ Serving you daily printed news since before newspapers went online.
 * headline
 
 ## Weekly Weather
+The weather on the front page needs updating. Can someone fill that in already?
 Sunday:    REPLACE
 Monday:    REPLACE
 Tuesday:   REPLACE
