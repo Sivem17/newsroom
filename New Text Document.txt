@@ -10,24 +10,23 @@ package a06;
  * @author Aitezaz Siddiqi (A00431079)
  */
 public class GradeDistribution {
- 
+
     private int reqGrade, numA, numB, numC, numD, numF, total;
 
-    public String addGrade(int numberGrade) {
-        this.reqGrade=numberGrade;
+    public void addGrade(int numberGrade) {
+        this.reqGrade = numberGrade;
         if (numberGrade >= 80) {
-            return numA++;
+            numA++;
         } else if (numberGrade >= 70) {
-            return numB++;
+            numB++;
         } else if (numberGrade >= 60) {
-            return numc++;
+            numC++;
         } else if (numberGrade >= 50) {
-            return numD++;
+            numD++;
         } else {
-            return numF++;
+            numF++;
         }
         total = numA + numB + numC + numD + numF;
-        
 
     }
 
@@ -35,8 +34,8 @@ public class GradeDistribution {
         return numA;
     }
 
-    pulic double percentAs() {
-        return A / (double) total * 100;
+    double percentAs() {
+        return numA / (double) total * 100;
     }
 
     public int getBs() {
@@ -44,7 +43,7 @@ public class GradeDistribution {
     }
 
     public double percentBs() {
-        return A / (double) total * 100;
+        return numB / (double) total * 100;
     }
 
     public int getCs() {
@@ -52,7 +51,7 @@ public class GradeDistribution {
     }
 
     public double percentCs() {
-        return A / (double) total * 100;
+        return numC / (double) total * 100;
     }
 
     public int getDs() {
@@ -60,7 +59,7 @@ public class GradeDistribution {
     }
 
     public double percentDs() {
-        return A / (double) total * 100;
+        return numD / (double) total * 100;
     }
 
     public int getFs() {
@@ -68,13 +67,13 @@ public class GradeDistribution {
     }
 
     public double percentFs() {
-        return A / (double) total * 100;
+        return numF / (double) total * 100;
     }
 
     public int getTotal() {
         return total;
     }
-    
+
     public void print() {
 
         System.out.println();
@@ -92,40 +91,43 @@ public class GradeDistribution {
             }
         }
         System.out.println();
-    
+
         System.out.print("A");
         for (int i = 0; i < ((numA / (double) total * 100) * 6 / 10); i++) {
             System.out.print("*");
         }
         System.out.println();
-    
+
         System.out.print("B");
         for (int i = 0; i < ((numB / (double) total * 100) * 6 / 10); i++) {
             System.out.print("*");
         }
         System.out.println();
-    
+
         System.out.print("C");
         for (int i = 0; i < ((numC / (double) total * 100) * 6 / 10); i++) {
             System.out.print("*");
         }
         System.out.println();
-    
+
         System.out.print("D");
         for (int i = 0; i < ((numD / (double) total * 100) * 6 / 10); i++) {
             System.out.print("*");
         }
         System.out.println();
-    
+
         System.out.print("F");
         for (int i = 0; i < ((numF / (double) total * 100) * 6 / 10); i++) {
             System.out.print("*");
         }
     }
 
-    
     public void reset() {
         numA = 0;
+        numB = 0;
+        numC = 0;
+        numD = 0;
+        numF = 0;
     }
 
 }
